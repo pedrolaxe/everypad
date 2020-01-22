@@ -1,6 +1,6 @@
 {
   "name": "EveryPad",
-  "description": "The best Pad to your Browser and send data to DontPad",
+  "description": "The best Pad with integration to DontPad",
   "version": "0.4",
   "author": "Pedro Laxe",
   "content_scripts": [
