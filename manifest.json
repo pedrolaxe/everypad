@@ -1,11 +1,11 @@
 {
   "name": "EveryPad",
   "description": "The best Pad with integration to DontPad",
-  "version": "0.4",
+  "version": "0.4.1",
   "author": "Pedro Laxe",
   "content_scripts": [
     {
-      "matches": ["https://*/*", "http://*/*", "http://www.dontpad.com/*"],
+      "matches": ["http://www.dontpad.com/*"],
       "css": ["style.css"],
       "js": ["jquery.js","script.js"]
     }
@@ -21,7 +21,6 @@
     "128": "icon/128.png"
   },
   "permissions": [
-    "activeTab",
     "storage",
     "https://ajax.googleapis.com/"
   ]
