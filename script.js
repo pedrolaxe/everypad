@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
 	var url = 'http://www.dontpad.com/';
-	var ramdom = Math.random().toString(5).substring(2, 7) + Math.random().toString(5).substring(2, 7);
-	var urlcode = url+ramdom;
+	var random = Math.random().toString(36).substring(8);;
+	var urlcode = url+random;
+
 
 	$('#codepad').on('change keyup', function(){
 		var linkval = $('#link').val().trim();
@@ -47,4 +48,21 @@ $(document).ready(function(){
 
 	
 	});
+
+
+	function GetSavedDontPad(){
+		var urlbase = 'http://www.dontpad.com/';
+		var link = $('#getdata').val();
+		console.log("LINK: "+ link);
+			$('#getdata').on('change keyup', function(){	
+				console.log("LINK: "+ $('#getdata').val());
+				console.log('http://www.dontpad.com/' +	$('#getdata').val());
+				
+				$.ajax({'url':'http://www.dontpad.com/'+$('#getdata').val(), data: {}, success: function(xhr, status) {
+					console.log(xhr.status); }
+				});
+				
+			});
+	}
+	GetSavedDontPad();
 });
