@@ -27,8 +27,11 @@ section {
 	border: 1px solid #cccccc;
 	border-radius: 10px;
 }
-#link{
+input[type="text"]{
 	padding: 5px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
+}
+#response{
+	margin-top: 5px;
 }

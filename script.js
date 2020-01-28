@@ -54,13 +54,19 @@ $(document).ready(function(){
 		var urlbase = 'http://www.dontpad.com/';
 		var link = $('#getdata').val();
 		console.log("LINK: "+ link);
+
 			$('#getdata').on('change keyup', function(){	
-				console.log("LINK: "+ $('#getdata').val());
-				console.log('http://www.dontpad.com/' +	$('#getdata').val());
-				
-				$.ajax({'url':'http://www.dontpad.com/'+$('#getdata').val(), data: {}, success: function(xhr, status) {
-					console.log(xhr.status); }
+				setTimeout(function(){ 
+				$.ajax({
+					url: "https://cors-anywhere.herokuapp.com/" + urlbase + $('#getdata').val(),
+					method: "get",
+					success: function(data) {
+						
+					var texto = $(data).find("#text").html(); // div#success
+						$('#codepad').val(texto);
+					}
 				});
+			}, 1000);
 				
 			});
 	}
