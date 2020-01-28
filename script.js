@@ -3,6 +3,11 @@ $(document).ready(function(){
 	var url = 'http://www.dontpad.com/';
 	var random = Math.random().toString(36).substring(8);;
 	var urlcode = url+random;
+	$("#options").hide();
+
+	$("#optbt").click(function(){
+		$("#options").toggle();
+	  });
 
 
 	$('#codepad').on('change keyup', function(){

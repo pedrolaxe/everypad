@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>EveryPad</title>
-        <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css">
 		<script src="jquery.js"></script>
 		<script src="script.js"></script>
   </head>
@@ -13,22 +13,24 @@
   	</header>
 
   	<section class="content">
-        Saved to: <div id="saveto"></div>
-		
-      <h4>Options</h4>
-      
-      
+      <div id="savetobox">
+        Saved to: 
+        <div id="saveto"></div>
+      </div>
+	
+      <button id="optbt">Options</button>
+    
       <div id="options">
         DontPad Link <input type="text" id="link" value=""> <span style="color: #ff0000;">(Optional)</span><br>
         <br>
         Open Saved   <input type="text" id="getdata" value=""> <span style="color: #ff0000;">(Optional)</span><br>
       </div>
-      <br>
-      <textarea id="codepad"></textarea>
-      
-        <br>
+
+      <div id="textbox">
+        <textarea id="codepad"></textarea>
+      </div>
 		<div id="response"></div>
-		<br>
+		
         
   	</section>
   	
