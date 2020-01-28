@@ -1,4 +1,4 @@
-# everypad
+# EveryPad
 The best Pad with integration to DontPad
 
 #### Download Here
