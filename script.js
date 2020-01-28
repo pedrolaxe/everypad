@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
 	var url = 'http://www.dontpad.com/';
-	var ramdom = Math.random().toString(5).substring(2, 7) + Math.random().toString(5).substring(2, 7);
-	var urlcode = url+ramdom;
+	var random = Math.random().toString(36).substring(8);;
+	var urlcode = url+random;
+
 
 	$('#codepad').on('change keyup', function(){
 		var linkval = $('#link').val().trim();
@@ -47,4 +48,27 @@ $(document).ready(function(){
 
 	
 	});
+
+
+	function GetSavedDontPad(){
+		var urlbase = 'http://www.dontpad.com/';
+		var link = $('#getdata').val();
+		console.log("LINK: "+ link);
+
+			$('#getdata').on('change keyup', function(){	
+				setTimeout(function(){ 
+				$.ajax({
+					url: "https://cors-anywhere.herokuapp.com/" + urlbase + $('#getdata').val(),
+					method: "get",
+					success: function(data) {
+						
+					var texto = $(data).find("#text").html(); // div#success
+						$('#codepad').val(texto);
+					}
+				});
+			}, 1000);
+				
+			});
+	}
+	GetSavedDontPad();
 });
