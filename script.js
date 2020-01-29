@@ -3,7 +3,11 @@ $(document).ready(function(){
 	var url = 'http://www.dontpad.com/';
 	var random = Math.random().toString(36).substring(8);;
 	var urlcode = url+random;
+	$("#options").hide();
 
+	$("#optbt").click(function(){
+		$("#options").toggle();
+	  });
 
 	$('#codepad').on('change keyup', function(){
 		var linkval = $('#link').val().trim();
@@ -12,40 +16,39 @@ $(document).ready(function(){
 		var dpad = $('#codepad').val();
 		
 		if(dpad.length > 0 ){
-			if($('#link').val().length === 0){
+				if($('#link').val().length === 0){
 
-			$.ajax({ 
-				url: urlcode,
-				data: {"text": dpad},
-				type: 'post',
-				beforeSend: function() {
-					$('#response').html('<img src="loader.gif">');
-				  },
-				success: function(result){
-				$('#saveto').text(urlcode).show(500);
-				$('#response').html('');
-				console.log(urlcode);
-				}
-			});
+				$.ajax({ 
+					url: urlcode,
+					data: {"text": dpad},
+					type: 'post',
+					beforeSend: function() {
+						$('#response').html('<img src="loader.gif">');
+					},
+					success: function(result){
+					$('#saveto').text(urlcode).show(500);
+					$('#response').html('');
+					console.log(urlcode);
+					}
+				});
 
-		}else{
-		
-			$.ajax({
-				url: urllink,
-				data: {"text": dpad},
-				type: 'post',
-				beforeSend: function() {
-					$('#response').html('<img src="loader.gif">');
-				  },
-				success: function(result){
-				$('#saveto').text(urllink).show(500);
-				$('#response').html('');
-				console.log(urllink);
-				}
-			});
-		}//else
+			}else{
+			
+				$.ajax({
+					url: urllink,
+					data: {"text": dpad},
+					type: 'post',
+					beforeSend: function() {
+						$('#response').html('<img src="loader.gif">');
+					},
+					success: function(result){
+					$('#saveto').text(urllink).show(500);
+					$('#response').html('');
+					console.log(urllink);
+					}
+				});
+			}//else
 		}//if
-
 	
 	});
 
@@ -53,7 +56,7 @@ $(document).ready(function(){
 	function GetSavedDontPad(){
 		var urlbase = 'http://www.dontpad.com/';
 		var link = $('#getdata').val();
-		console.log("LINK: "+ link);
+		
 
 			$('#getdata').on('change keyup', function(){	
 				setTimeout(function(){ 
@@ -62,10 +65,11 @@ $(document).ready(function(){
 					method: "get",
 					success: function(data) {
 						
-					var texto = $(data).find("#text").html(); // div#success
+					var texto = $(data).find("#text").html();
 						$('#codepad').val(texto);
 					}
 				});
+				$('#link').val($('#getdata').val());
 			}, 1000);
 				
 			});
