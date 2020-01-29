@@ -31,8 +31,11 @@ section .content{
 }
 #savetobox{
 	width: 100%;
-    height: 33px;
+    height: 30px;
 	padding: 5px;
+	float: left;
+}
+#textosave{
 	float: left;
 }
 #textbox{
@@ -51,6 +54,12 @@ input[type="text"]{
 	padding: 5px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
+}
+.btn-classic{
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-size: 11px;
 }
 #response{
     width: 40px;
