@@ -28,6 +28,7 @@ section .content{
 }
 #optbt{
 	margin-bottom: 10px;
+	cursor: pointer;
 }
 #savetobox{
 	width: 100%;
@@ -43,22 +44,16 @@ section .content{
 	float: left;
 }
 #codepad{
-	width: 96.5%;
+	width: 94%;
     height: 180px;
     margin: 0 auto;
     border: 1px solid #cccccc;
     border-radius: 10px;
-    padding: 5px;
-}
-input[type="text"]{
-	padding: 5px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
 }
 .btn-classic{
 	padding: 5px;
 	border: 1px solid #ccc;
-	border-radius: 10px;
+	border-radius: 5px;
 	font-size: 11px;
 }
 #response{
@@ -66,4 +61,33 @@ input[type="text"]{
 	height: 25px;
 	margin-top: 5px;
     float: left;
+}
+
+/* New Styles */
+input[type="text"],
+textarea {
+  width: 70%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+input[type="text"]:hover,
+textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+input:focus,
+textarea:focus,
+button:focus{
+  outline: 0;
+  border: 1px solid #aaa;
+}
+textarea {
+  height: 192px;
+  max-width: 100%;
+  resize: none;
 }

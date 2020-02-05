@@ -1,7 +1,7 @@
 {
   "name": "EveryPad",
   "description": "The best Pad with integration to DontPad",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "author": "Pedro Laxe",
   "content_scripts": [
     {
