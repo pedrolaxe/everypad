@@ -70,6 +70,7 @@ $(document).ready(function(){
 					}
 				});
 				$('#link').val($('#getdata').val());
+				$('#saveto').text(urlbase + $('#getdata').val()).show(500);
 			}, 1000);
 				
 			});
