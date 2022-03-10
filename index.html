@@ -1,38 +1,43 @@
 <!doctype html>
 <html>
-  <head>
-    <title>EveryPad</title>
-    <link rel="stylesheet" href="app.css">
-		<script src="jquery.js"></script>
-		<script src="script.js"></script>
-  </head>
-  <body>
-  	<header>
-            <h1>EveryPad </h1>
-            <h3>Save code to DontPad direct your browser!</h3>
-  	</header>
 
-  	<section class="content">
-      <div id="savetobox">
-        <div class="textosave">Saved to:</div> 
-        <div id="saveto"></div>
-      </div>
-	
-      <button id="optbt" class="btn-classic">Options</button>
-    
-      <div id="options">
-        <input type="text" id="link" placeholder="DontPad Link" value=""> <span style="color: #ff0000;">(Optional)</span><br>
-        <br>
-        <input type="text" id="getdata" placeholder="Open Saved" value=""> <span style="color: #ff0000;">(Optional)</span><br>
-      </div>
+<head>
+  <title>EveryPad</title>
+  <link rel="stylesheet" href="app.min.css">
+  <script src="jquery.js"></script>
+  <script src="script.js"></script>
+</head>
 
-      <div id="textbox">
-        <textarea id="codepad"></textarea>
-      </div>
-		<div id="response"></div>
-		
-        
-  	</section>
-  	
-  </body>
+<body>
+  <header>
+    <h1>EveryPad </h1>
+    <h3>Save code to DontPad direct your browser!</h3>
+  </header>
+
+  <section class="content">
+    <div id="savetobox">
+      <div class="textosave">Saved to:</div>
+      <div id="saveto"></div>
+    </div>
+
+    <button id="optbt" class="btn-classic">Options</button>
+
+    <div id="options">
+      <input type="text" id="link" placeholder="DontPad Link" value="" autocomplete="off"> <span
+        style="color: #ff0000;">(Optional)</span><br>
+      <br>
+      <input type="text" id="getdata" placeholder="Open Saved" value="" autocomplete="off"> <span
+        style="color: #ff0000;">(Optional)</span><br>
+    </div>
+
+    <div id="textbox">
+      <textarea id="codepad"></textarea>
+    </div>
+    <div id="response"></div>
+
+
+  </section>
+
+</body>
+
 </html>

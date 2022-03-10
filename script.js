@@ -65,6 +65,7 @@ $(document).ready(function(){
 					method: "get",
 					success: function(data) {
 						
+					console.log("data:", data)
 					var texto = $(data).find("#text").html();
 						$('#codepad').val(texto);
 					}

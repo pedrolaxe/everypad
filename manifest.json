@@ -1,7 +1,7 @@
 {
   "name": "EveryPad",
   "description": "The best Pad with integration to DontPad",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "author": "Pedro Laxe",
   "content_scripts": [
     {
@@ -10,18 +10,14 @@
       "js": ["jquery.js","script.js"]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "EveryPad"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "icons":{
   	"16": "icon/16.png",
     "48": "icon/48.png",
     "128": "icon/128.png"
-  },
-  "permissions": [
-    "storage",
-    "https://ajax.googleapis.com/"
-  ]
+  }
 }
